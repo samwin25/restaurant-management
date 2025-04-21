@@ -47,7 +47,7 @@ const Product = sequelize.define('product', {
 const Menu = sequelize.define('menu', {
   name: { type: DataTypes.STRING(50), allowNull: false },
   description: { type: DataTypes.STRING(50) },
-  day: { type: DataTypes.DATEONLY, allowNull: false },
+  day: { type: DataTypes.INTEGER, allowNull: false },
   price: { type: DataTypes.DECIMAL, allowNull: false }
 },{
   tableName: 'menus',
@@ -58,7 +58,7 @@ const Menu = sequelize.define('menu', {
 const Reservation = sequelize.define('reservation', {
   date: { type: DataTypes.DATEONLY, allowNull: false }
 },{
-  tableName: 'reservstions',
+  tableName: 'reservations',
   timestamps: false // 👈 disables createdAt & updatedAt 
 });
 
